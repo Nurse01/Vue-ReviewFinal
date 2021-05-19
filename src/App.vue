@@ -1,10 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app" class="m-10 ">
+    <HelloWorld msg="INT203 Final" />
   </div>
-  <router-view/>
+  <router-view />
 </template>
+<script>
+import HelloWorld from "@/components/HelloWorld.vue";
+
+export default {
+  name: "App",
+  components: {
+    HelloWorld,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -13,18 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.header {
+  text-align: center;
+  font-weight: 700;
 }
 </style>
